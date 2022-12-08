@@ -14,7 +14,7 @@ use App\Http\Controllers\AlumnoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+return view('layouts.app');
 });
 //ruta para las vistas de los create y imdde
 /*Route::get('/alumno',[AlumnoController::class,'index'])->name('alumnos.index');

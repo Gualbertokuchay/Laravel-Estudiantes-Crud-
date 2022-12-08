@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title','Home')
+@section('title')
 
 @section('content')
 
@@ -9,7 +9,7 @@
 
     <table class="table-fixed w-full">
       <thead>
-        <tr class="bg-red-500 text-white w-full">
+        <tr class="bg-purple-500 text-white w-full">
           <th class="w-20 py-4">ID</th>
           <th class="w-1/8 py-4">nombre</th>
           <th class="w-1/16 py-4">apellido</th>
@@ -35,14 +35,17 @@
             <form action="{{route('alumnos.destroy',$tabla->id)}}" method="POST">
             @csrf
             @method('delete')
-            <button class="bg-red-500 text-white px-3 py-1 rounded-sm m-4">
+            <button class="bg-purple-500 text-white px-3 py-1 rounded-sm m-4">
             <i class="fas fa-trash"></i></button>
             </form>
-            <a href="{{route('alumnos.edit',$tabla->id)}}" class="bg-green-500 text-white px-3 py-1 rounded-sm m-4">
+            <a href="{{route('alumnos.edit',$tabla->id)}}" class="bg-purple-500 text-white px-3 py-1 rounded-sm m-4">
             <i class="fas fa-pen"></i></button>
           </td>
         </tr>
-       
+<nav>
+  
+         <!-- ruta para la tabla principal -->
+</nav>
         @endforeach
       </tbody>
     </table>
